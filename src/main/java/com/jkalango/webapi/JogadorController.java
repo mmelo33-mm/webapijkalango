@@ -15,6 +15,7 @@ public class JogadorController {
 
         @PostMapping
         public void cadastrar(@RequestBody DadosCadastroJogador dados){
-            System.out.println(dados);
+            //System.out.println(dados);
+            repository.save(new Jogador(dados);
         }
 }
