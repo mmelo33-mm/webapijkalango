@@ -21,8 +21,16 @@ public class Jogador {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String nickname;
+    private String nickName;
     private String email;
     private String telefone;
     private String senha;
+
+public Jogador (DadosCadastroJogador dados){
+    this.nome = dados.nome();
+    this.nickName = dados.nickName();
+    this.email = dados.email();
+    this.telefone = dados.telefone();
+    this.senha = dados.senha();
+}
 }
